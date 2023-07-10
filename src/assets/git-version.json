@@ -1,11 +1,11 @@
 {
   "version": "1.0.2",
-  "hash": "f96c4eca715a00ea93d9a2cfb160f83db5392cb7",
-  "shortHash": "f96c4ec",
-  "commit": "f96c4eca715a00ea93d9a2cfb160f83db5392cb7",
-  "shortCommit": "f96c4ec",
-  "author": "Burdhi. Shivani",
-  "email": "BU40088124@wipro.com",
-  "date": "Thu May 11 13:30:43 2023 +0530",
-  "message": "multiple api calls"
+  "hash": "a66447c4227fd2ba7db2c02af4372547dd856e1a",
+  "shortHash": "a66447c",
+  "commit": "a66447c4227fd2ba7db2c02af4372547dd856e1a",
+  "shortCommit": "a66447c",
+  "author": "Vidyadevi Salunkhe",
+  "email": "84471226+Vidyaaa24@users.noreply.github.com",
+  "date": "Mon Jul 10 11:48:51 2023 +0530",
+  "message": "Update pom.xml"
 }
