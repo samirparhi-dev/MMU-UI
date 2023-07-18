@@ -75,6 +75,7 @@ export class RegistrationUtils {
       ageUnit: null,
       ageAtMarriage: null,
       fingerprint: null,
+      monthlyFamilyIncome: null
     })
   }
 

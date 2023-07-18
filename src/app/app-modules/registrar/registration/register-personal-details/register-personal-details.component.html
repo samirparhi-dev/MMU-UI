@@ -103,13 +103,6 @@
           <md-error *ngIf="personalDetailsForm.controls.ageAtMarriage.errors?.maxlength">{{currentLanguageSet?.common?.invalidMarriageAge}}</md-error>
         </md-form-field>
       </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
-        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.incomeStatus}}" (change)="onIncomeChanged()" formControlName="income">
-          <md-option *ngFor="let incomeStatus of masterData?.incomeMaster" [value]="incomeStatus.incomeStatusID">{{incomeStatus.incomeStatus }} </md-option>
-        </md-select>
-      </div>
-
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
         <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.literacyStatus}}" formControlName="literacyStatus" (change)="changeLiteracyStatus()">
           <md-option value="Illiterate">Illiterate </md-option>
@@ -125,16 +118,62 @@
       </div>
 
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
-        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.occupation}}" formControlName="occupation" (change)="getOccupationName()">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 m-t-15" style="padding-top: 7px">
+            <md-checkbox checked="checked" formControlName="checked" (change)="checkOccuptionsRequired($event)"></md-checkbox>
+          </div>
+      <div class="col-xs-10 col-sm-10 m-l-10-">
+        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.occupation}}" formControlName="occupation" [required]="isOccuptionRequired" (change)="getOccupationName()">
           <md-option *ngFor="let occupation of masterData?.occupationMaster" [value]="occupation.occupationID">{{occupation.occupationType | titlecase }} </md-option>
         </md-select>
       </div>
+      </div>
+      </div>
 
-      <div *ngIf="personalDetailsForm.value.occupation == '7'" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.incomeStatus}}" (change)="onIncomeChanged()" formControlName="income">
+          <md-option *ngFor="let incomeStatus of masterData?.incomeMaster" [value]="incomeStatus.incomeStatusID">{{incomeStatus.incomeStatus }} </md-option>
+        </md-select>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+        <md-form-field [style.width]="'100%'">
+          <input defaultNull autocomplete="off" allowText="number" mdInput placeholder="{{currentLanguageSet?.ro?.personalInfo?.monthlyFamilyIncome }}" formControlName="monthlyFamilyIncome" maxlength="7">
+        </md-form-field>
+      </div>
+
+
+      <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.literacyStatus}}" formControlName="literacyStatus" (change)="changeLiteracyStatus()">
+          <md-option value="Illiterate">Illiterate </md-option>
+          <md-option value="Illiterate (can sign)">Illiterate (can sign) </md-option>
+          <md-option value="Literate">Literate </md-option>
+        </md-select>
+      </div>
+
+      <div *ngIf="personalDetailsForm.value.literacyStatus == 'Literate'" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+        <md-select [style.width]="'100%'" [required]="personalDetailsForm.value.literacyStatus == 'Literate'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.educationalQualification}}" formControlName="educationQualification" (change)="onEducationQualificationChanged()">
+          <md-option *ngFor="let qualification of masterData?.qualificationMaster" [value]="qualification.educationID">{{qualification.educationType | titlecase }} </md-option>
+        </md-select>
+      </div>
+       -->
+      <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 m-t-15" style="padding-top: 7px">
+            <md-checkbox checked="checked" formControlName="checked" (change)="checkOccuptionsRequired($event)"></md-checkbox>
+          </div>
+      <div class="col-xs-10 col-sm-10 m-l-10-">
+        <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.occupation}}" formControlName="occupation" [required]="isOccuptionRequired" (change)="getOccupationName()">
+          <md-option *ngFor="let occupation of masterData?.occupationMaster" [value]="occupation.occupationID">{{occupation.occupationType | titlecase }} </md-option>
+        </md-select>
+      </div>
+      </div>
+      </div> -->
+
+      <!-- <div *ngIf="personalDetailsForm.value.occupation == '7'" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 box">
         <md-form-field [style.width]="'100%'">
           <input autocomplete="off" autofocus mdInput allowText="alphaspace" placeholder="{{currentLanguageSet?.ro?.personalInfo?.otherOccupation}}" formControlName="occupationOther" minlength="3" maxlength="50" [required]="true">
         </md-form-field>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

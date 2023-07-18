@@ -568,7 +568,8 @@ console.log("demo", otherDetailsForm.value);
         'habitation': demographicsForm.habitation || undefined,
         'incomeStatusID': personalForm.income || undefined,
         'incomeStatus': personalForm.incomeName || undefined,
-        'incomeStatusName': personalForm.incomeName || undefined
+        'incomeStatusName': personalForm.incomeName || undefined,
+        'monthlyFamilyIncome': personalForm.monthlyFamilyIncome || undefined
       },
       'benPhoneMaps': [
         {
@@ -858,6 +859,7 @@ console.log("demo", otherDetailsForm.value);
       'i_bendemographics': {
         'incomeStatusID': personalForm.income,
         'incomeStatusName': personalForm.incomeName,
+        'monthlyFamilyIncome': personalForm.monthlyFamilyIncome,
         'occupationID': personalForm.occupation,
         'occupationName': personalForm.occupationOther,
         'educationID': personalForm.educationQualification,
