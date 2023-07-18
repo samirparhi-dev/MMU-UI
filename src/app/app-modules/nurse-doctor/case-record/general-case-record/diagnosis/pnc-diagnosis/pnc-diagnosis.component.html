@@ -11,7 +11,7 @@
             <ng-container [formGroupName]="i">
               <div class="col-xs-12 col-sm-9 box">
                 <md-form-field class="input-full-width">
-                  <input mdInput appOpenModal allowText="inputFieldValidator" [diagnosisListForm]="diagnosis" required name="provisionalDiagnosis" formControlName="provisionalDiagnosis" maxlength="100" minlength="3" [previousSelected]="generalDiagnosisForm?.value?.provisionalDiagnosisList">
+                  <input mdInput appOpenModal allowText="inputFieldValidator" [diagnosisListForm]="diagnosis" name="provisionalDiagnosis" formControlName="provisionalDiagnosis" maxlength="100" minlength="3" [previousSelected]="generalDiagnosisForm?.value?.provisionalDiagnosisList">
                   <md-icon class="search-btn" *ngIf="!(diagnosis.controls['provisionalDiagnosis'].disabled)" mdSuffix appOpenModal [diagnosisListForm]="diagnosis" [previousSelected]="generalDiagnosisForm?.value?.provisionalDiagnosisList">search</md-icon>
                 </md-form-field>
               </div>
@@ -34,7 +34,7 @@
             <ng-container [formGroupName]="i">
               <div class="col-xs-12 col-sm-9 box">
                 <md-form-field class="input-full-width">
-                  <input mdInput appConfirmatoryDiagnosis [diagnosisListForm]="confirmatoryDiagnosis" required name="confirmatoryDiagnosis" formControlName="confirmatoryDiagnosis" maxlength="100" minlength="3" [previousSelected]="generalDiagnosisForm?.value?.confirmatoryDiagnosisList">
+                  <input mdInput appConfirmatoryDiagnosis [diagnosisListForm]="confirmatoryDiagnosis"  name="confirmatoryDiagnosis" formControlName="confirmatoryDiagnosis" maxlength="100" minlength="3" [previousSelected]="generalDiagnosisForm?.value?.confirmatoryDiagnosisList">
                   <md-icon class="search-btn" *ngIf="!(confirmatoryDiagnosis.controls['confirmatoryDiagnosis'].disabled)" mdSuffix appConfirmatoryDiagnosis [diagnosisListForm]="confirmatoryDiagnosis" [previousSelected]="generalDiagnosisForm?.value?.confirmatoryDiagnosisList">search</md-icon>
 
                 </md-form-field>
