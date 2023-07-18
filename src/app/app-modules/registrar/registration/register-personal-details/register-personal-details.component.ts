@@ -197,7 +197,8 @@ export class RegisterPersonalDetailsComponent implements OnInit {
       educationQualification: element.i_bendemographics && element.i_bendemographics.i_beneficiaryeducation && element.i_bendemographics.i_beneficiaryeducation.educationID || null,
       educationQualificationName: element.i_bendemographics && element.i_bendemographics.i_beneficiaryeducation && element.i_bendemographics.i_beneficiaryeducation.educationType || null,
       occupation: element.i_bendemographics && element.i_bendemographics.occupationID || null,
-      occupationOther: element.i_bendemographics && element.i_bendemographics.occupationName || null
+      occupationOther: element.i_bendemographics && element.i_bendemographics.occupationName || null,
+      monthlyFamilyIncome: element.monthlyFamilyIncome
     })
     // this.onMaritalStatusChanged(); // Marital status Changed
     this.masterData.incomeMaster.forEach(stat => {
@@ -301,6 +302,19 @@ export class RegisterPersonalDetailsComponent implements OnInit {
       this.isMobileNoRequired = false;
     }
   }
+
+   /**
+  * check if Occupation  is required
+  *
+  */
+   isOccuptionRequired: boolean = true;
+   checkOccuptionsRequired(val: any) {
+     if (val.checked == true) {
+       this.isOccuptionRequired = true;
+     } else {
+       this.isOccuptionRequired = false;
+     }
+   }
 
   /**
   * check if finger print is required

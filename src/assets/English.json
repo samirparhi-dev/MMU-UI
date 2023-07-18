@@ -43,6 +43,7 @@
         "ageUnit": "Age Unit",
         "dob": "DOB (DD/MM/YYYY)",
         "incomeStatus": "Income Status",
+        "monthlyFamilyIncome" :"Monthly Family Income",
         "literacyStatus": "Literacy Status",
         "occupation": "Occupation",
         "dateOfBirth": "Date of Birth",

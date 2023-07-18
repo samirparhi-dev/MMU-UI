@@ -41,6 +41,7 @@
         "ageUnit": "उम्र यूनिट",
         "dob": "जन्म तिथि(दिन / महीना / साल)",
         "incomeStatus": "आय स्थिति",
+        "monthlyFamilyIncome" :"Monthly Family Income",
         "literacyStatus": "साक्षरता स्थिति",
         "occupation": "व्यवसाय",
         "dateOfBirth": "जन्म की तारीख",
