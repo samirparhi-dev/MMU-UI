@@ -124,7 +124,7 @@
           </div>
       <div class="col-xs-10 col-sm-10 m-l-10-">
         <md-select [style.width]="'100%'" placeholder="{{currentLanguageSet?.ro?.personalInfo?.occupation}}" formControlName="occupation" [required]="isOccuptionRequired" (change)="getOccupationName()">
-          <md-option *ngFor="let occupation of masterData?.occupationMaster" [value]="occupation.occupationID">{{occupation.occupationType | titlecase }} </md-option>
+          <md-option class="dropdownValueOccupation"  *ngFor="let occupation of masterData?.occupationMaster" [value]="occupation.occupationID">{{occupation.occupationType | titlecase }} </md-option>
         </md-select>
       </div>
       </div>
