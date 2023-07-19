@@ -1054,9 +1054,11 @@ export class WorkareaComponent implements OnInit, CanComponentDeactivate {
 
     const required = [];
 
+    if(environment.isMMUOfflineSync) {
     if(this.enableLungAssessment === true && this.beneficiaryAge >= 18 && this.nurseService.isAssessmentDone === false) {
       required.push("Please perform Lung Assessment");
     }
+  }
 
 
     console.log("pncForm", pncForm);
@@ -1716,9 +1718,11 @@ export class WorkareaComponent implements OnInit, CanComponentDeactivate {
     );
     const required = [];
 
+  if(environment.isMMUOfflineSync) {
     if(this.enableLungAssessment === true && this.beneficiaryAge >= 18 && this.nurseService.isAssessmentDone === false) {
       required.push("Please perform Lung Assessment");
     }
+  }
 
     let count = 0;
     let physicalActivityMandatory = <FormGroup>(

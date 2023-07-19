@@ -45,20 +45,20 @@ const ADMIN_API = `${adminIP}/adminapi-v1.0`;
 // const MMU_API = `http://${IP}:8080/apiman-gateway/IEMR/MMU/1.0/`;
 
 // Without API MAN Configuration
-const COMMON_API_OPEN = `${commonIP}commonapi-v1.0/`;
+const COMMON_API_OPEN = `${commonIP}commonapi-v1.1/`;
 
 
 //const COMMON_API_OPEN = `${commonIP}/`;
-const COMMON_API = `${commonIP}commonapi-v1.0/`;
+const COMMON_API = `${commonIP}commonapi-v1.1/`;
 //const COMMON_API = `${commonIP}/`;
-const MMU_API = `${mmuIP}mmuapi-v1.0/`;
+const MMU_API = `${mmuIP}mmuapi-v1.1/`;
 // const MMU_API = `http://localhost:8080/`;
 //const MMU_API = `${mmuIP}/`;
 //const MMU_API = `http://localhost:8080/`
 
-const TM_API = `${tmIP}tmapi-v1.0/`;
-const COMMON_API_OPEN_SYNC = `http://${SERVER_IP}:8080/commonapi-v1.0/`;
-const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.0/`;
+const TM_API = `${tmIP}tmapi-v1.1/`;
+const COMMON_API_OPEN_SYNC = `http://${SERVER_IP}:8080/commonapi-v1.1/`;
+const SCHEDULER_API = `${schedulerIP}schedulerapi-v1.1/`;
 
 const mmuUICasesheet = 'http://localhost:4200/';
 
@@ -66,6 +66,7 @@ const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
 
 export const environment = {
   production: false,
+  isMMUOfflineSync: true,
 
   app: `MMU`,
   RBSTest:`RBS Test`,

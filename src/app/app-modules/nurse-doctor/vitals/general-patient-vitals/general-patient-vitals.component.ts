@@ -114,6 +114,7 @@ export class GeneralPatientVitalsComponent implements OnInit {
   painInChestChecked: any;
   shortnessOfBreathChecked: any;
   enableLungAssessment: boolean = false;
+  hideLungAssessment: boolean = false;
 
 
 
@@ -171,6 +172,11 @@ export class GeneralPatientVitalsComponent implements OnInit {
    this.rbsSelectedInInvestigationSubscription= this.nurseService.rbsSelectedInInvestigation$.subscribe(response => (response == undefined ? this.rbsSelectedInInvestigation = false : this.rbsSelectedInInvestigation = response));
    this.idrsscore.diabetesSelectedFlag$.subscribe(response => this.diabetesSelected = response);
    this.getGender();
+   if(environment.isMMUOfflineSync) {
+    this.hideLungAssessment = true;
+   } else {
+    this.hideLungAssessment = false;
+   }
    this.nurseService.enableLAssessment$.subscribe(
     (response) => {
       if(response == true) {

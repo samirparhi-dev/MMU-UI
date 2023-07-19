@@ -59,6 +59,7 @@ const IOT_API = 'http://localhost:8085/ezdx-hub-connect-srv';
 
 export const environment = {
   production: true,
+  isMMUOfflineSync: false,
 
   app: `MMU`,
   RBSTest:`RBS Test`,

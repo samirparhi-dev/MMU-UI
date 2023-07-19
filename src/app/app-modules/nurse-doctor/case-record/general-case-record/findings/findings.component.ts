@@ -33,6 +33,7 @@ import { ConfirmationService } from '../../../../core/services/confirmation.serv
 import { GeneralUtils } from '../../../shared/utility/general-utility';
 import { SetLanguageComponent } from 'app/app-modules/core/components/set-language.component';
 import { HttpServiceService } from 'app/app-modules/core/services/http-service.service';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-findings',
@@ -263,6 +264,7 @@ export class FindingsComponent implements OnInit {
             flag = true;
             break;
           }
+          if(environment.isMMUOfflineSync) {
           if (
             chiefComplaintForm.value[i].chiefComplaint.chiefComplaint.toLowerCase().includes("fever") ||
             chiefComplaintForm.value[i].chiefComplaint.chiefComplaint.toLowerCase().includes("cough") ||
@@ -278,6 +280,7 @@ export class FindingsComponent implements OnInit {
             flag = true;
             break;
           }
+        }
 
         }
       }
