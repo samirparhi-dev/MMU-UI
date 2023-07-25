@@ -157,6 +157,7 @@ set iterationCount(value) {
 
 generateKey(salt, passPhrase) {
   return CryptoJS.PBKDF2(passPhrase, CryptoJS.enc.Hex.parse(salt), {
+    hasher: CryptoJS.algo.SHA512,
     keySize: this.keySize / 32,
     iterations: this._iterationCount
   })
